@@ -1,0 +1,53 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Home{% endblock %}</title>
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'user_auth/login.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="container">
+      <a href="{% url 'users:home' %}"><img src="/media/logo.jpg" alt="rasm topilmadi" id='logo' /></a>
+      <ul>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'users:about' %}">Kompaniya haqida</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'users:contact' %}">Aloqa</a>
+        </li>
+        {% if request.user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'users:employee' %}">Ishchilar</a>
+            </li>
+        {% endif %}
+      </ul>
+    </div>
+    <div class="nav-item dropdown">
+      {% if request.user.is_authenticated %}
+      <a class="nav-link dropdown-toggle" href="#">
+          {{ request.user.username }}
+      </a>
+      <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="{% url 'users:employee' %}">Ishchilar ro'yxati</a></li>
+          <li><a class="dropdown-item" href="{% url 'users:profile' %}">Profile</a></li>
+          <li>
+              <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="{% url 'users:logout' %}">Logout</a></li>
+      </ul>
+      {% else %}
+      <a class="btn btn-outline-primary" href="{% url 'users:login' %}">Login</a>
+      {% endif %}
+    </div>
+</nav>
+
+
+{% block content %}
+{% endblock %}
+
+
+</body>
+</html>

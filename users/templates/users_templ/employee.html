@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Employee{% endblock %}
+
+{% block content %}
+  <div class="employee">
+      <h1>Ishchilar</h1>
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Foydalanuchi nomi</th>
+            <th scope="col">Ism</th>
+            <th scope="col">Familya</th>
+            <th scope="col">Mansab</th>
+            <th scope="col">Rasm</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for employee in employees %}
+          <tr>
+            <td>{{ employee.username }}</td>
+            <td>{{ employee.first_name }}</td>
+            <td>{{ employee.last_name }}</td>
+            <td>{{ employee.staff }}</td>
+            <td>
+              {% if employee.profile_photo and employee.profile_photo.url %}
+                <img src="{{ employee.profile_photo.url }}" class="profile-photo">
+              {% else %}
+                <img src="{% static 'media-files/guest-user.jpg' %}" class="profile-photo">
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+  </div>
+{% endblock %}

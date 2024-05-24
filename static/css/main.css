@@ -1,0 +1,270 @@
+.home_img {
+    width: 100vw;
+}
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    width: 100px;
+    height: auto;
+    border-radius: 12px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar .nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+.navbar .btn {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .btn:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.navbar .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar .dropdown-toggle {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar .dropdown-toggle:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+.navbar .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    color: #333;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Divider styling */
+.dropdown-divider {
+    border-top: 1px solid #e9ecef;
+    margin: 0.5rem 0;
+}
+
+.main-page-h1 {
+    text-align: center;
+}
+
+/* Container styling */
+.about {
+    margin: 2rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Centered text styling */
+.centered-text {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Styling for company information */
+.about h3 {
+    margin-top: 1.5rem;
+    color: #333;
+}
+
+.about p {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+/* Container styling */
+.contact {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 0.5rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact header styling */
+.contact-header {
+    background-color: blue;
+    padding: 1rem 0;
+}
+
+.contact-header-text {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+/* Contact information styling */
+.contact-info {
+    margin: 1.5rem;
+}
+
+.contact-info h4 {
+    margin-top: 1.5rem;
+    color: #333;
+}
+
+.contact-info p {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+/* Heading styling */
+.profile {
+    text-align: center;
+}
+
+/* Profile container styling */
+.profile-container {
+    margin-left: 100px;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-left: 40%;
+}
+
+/* Profile photo styling */
+.profile-photo {
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Profile edit link styling */
+.profile-edit-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.profile-edit-link:hover {
+    text-decoration: underline;
+}
+
+/* Paragraph styling */
+.profile-container p {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+/* Container styling */
+.employee {
+    margin: 2rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+.employee h1 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.table th, .table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+}

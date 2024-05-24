@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Profile{% endblock %}
+
+
+{% block content %}
+    <h1 class="profile">Profilingizga xush keldingiz {{ user.username }}!</h1>
+    <div class="profile-container">
+        <p>
+              {% if employee.profile_photo and employee.profile_photo.url %}
+                <img src="{{ employee.profile_photo.url }}" class="profile-photo">
+              {% else %}
+                <img src="{% static 'media-files/guest-user.jpg' %}" class="profile-photo">
+              {% endif %}
+        </p>
+        <a href="{% url 'users:profile_edit' %}" class="profile-edit-link">Profile edit</a>
+        <p>Username: {{ user.username }}</p>
+        <p>First name: {{ user.first_name }}</p>
+        <p>Last name: {{ user.last_name }}</p>
+        <p>Email: {{ user.email }}</p>
+    </div>
+{% endblock %}

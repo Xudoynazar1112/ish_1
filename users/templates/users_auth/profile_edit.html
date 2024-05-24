@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Profile edit{% endblock %}
+
+{% block content %}
+<h1 class="profile-edit">{{ user.username }} ma'lumotlaringizni yangilashingiz mumkin!</h1>
+<form method="post" enctype="multipart/form-data" style="margin-left: 100px">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Saqlash</button>
+</form>
+{% endblock %}
